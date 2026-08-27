@@ -180,8 +180,10 @@ export default function ScrapDealersPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-white flex flex-col lg:flex-row relative">
-      {/* ===================== SIDEBAR ===================== */}
+    <div className="min-h-screen w-full bg-[#EBECEF] p-2 sm:p-3 md:p-4 flex items-center justify-center">
+      {/* Outer Card Frame */}
+      <div className="w-full bg-[#111827] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl border border-gray-200/50 flex flex-col lg:flex-row min-h-[calc(100vh-16px)] sm:min-h-[calc(100vh-24px)] md:min-h-[calc(100vh-32px)] relative">
+        {/* ===================== SIDEBAR ===================== */}
         <aside className="w-full lg:w-[240px] xl:w-[250px] bg-[#111827] text-white flex flex-col justify-between p-4 lg:p-5 shrink-0 border-b lg:border-b-0 lg:border-r border-gray-800">
           <div>
             {/* Logo */}
@@ -695,6 +697,7 @@ export default function ScrapDealersPage() {
         </div>
       )}
 
+      </div>
     </div>
   );
 }
