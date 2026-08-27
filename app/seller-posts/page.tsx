@@ -287,11 +287,8 @@ export default function SellerPostsPage() {
   };
 
   return (
-    <div className="min-h-screen w-full bg-[#525252] p-2 sm:p-4 md:p-6 lg:p-7 flex items-center justify-center">
-      {/* Outer Card Frame */}
-      <div className="w-full max-w-[1440px] bg-[#111827] rounded-[28px] md:rounded-[36px] overflow-hidden shadow-2xl border border-white/10 flex flex-col lg:flex-row min-h-[920px] relative">
-        
-        {/* ===================== SIDEBAR ===================== */}
+    <div className="min-h-screen w-full bg-white flex flex-col lg:flex-row relative">
+      {/* ===================== SIDEBAR ===================== */}
         <aside className="w-full lg:w-[240px] xl:w-[250px] bg-[#111827] text-white flex flex-col justify-between p-4 lg:p-5 shrink-0 border-b lg:border-b-0 lg:border-r border-gray-800">
           <div>
             {/* Brand Logo */}
@@ -637,8 +634,6 @@ export default function SellerPostsPage() {
           </main>
 
         </div>
-
-      </div>
 
       {/* ===================== 1. POST DETAILS MODAL ===================== */}
       {isDetailsOpen && selectedPost && (
