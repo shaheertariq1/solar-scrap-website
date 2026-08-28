@@ -21,34 +21,34 @@ export default function VerifyEmailPage() {
   };
 
   return (
-    <main className="min-h-screen w-full bg-[#EBECEF] p-2 sm:p-3 md:p-4 lg:p-5 flex items-center justify-center">
+    <main className="min-h-screen w-full bg-[#EBECEF] p-2 sm:p-4 md:p-6 lg:p-8 flex items-center justify-center">
       {/* Outer Card filling the viewport */}
-      <div className="w-full bg-white rounded-[28px] md:rounded-[36px] p-3 sm:p-4 md:p-5 shadow-2xl border border-gray-200/60 flex flex-col md:flex-row min-h-[calc(100vh-16px)] sm:min-h-[calc(100vh-24px)] md:min-h-[calc(100vh-32px)]">
+      <div className="w-full max-w-[1380px] bg-white rounded-[28px] sm:rounded-[32px] md:rounded-[40px] shadow-2xl border border-gray-200/70 flex flex-col md:flex-row relative min-h-[calc(100vh-16px)] sm:min-h-[calc(100vh-32px)] md:min-h-[720px] overflow-hidden">
         
-        {/* Left Column - Verify Email Scrap Image with rounded corners & shadow */}
-        <div className="relative w-full md:w-[50%] lg:w-[48%] h-[320px] sm:h-[400px] md:h-auto min-h-[300px] md:min-h-full rounded-[22px] md:rounded-[28px] overflow-hidden shadow-sm shrink-0">
+        {/* Left Column - Verify Email Scrap Image */}
+        <div className="relative w-full md:w-[54%] lg:w-[56%] h-[280px] sm:h-[360px] md:h-auto min-h-[260px] md:min-h-full shrink-0">
           <Image
             src="/images/verify-email-screen.jpg"
             alt="Industrial Scrap Equipment"
             fill
             priority
             className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 768px) 100vw, 60vw"
           />
         </div>
 
-        {/* Right Column - Verify Form (Spacious, bold, perfectly scaled) */}
-        <div className="flex-1 bg-white flex flex-col justify-center items-center px-6 py-8 sm:px-10 sm:py-12 md:px-14 lg:px-20">
-          <div className="w-full max-w-[440px] flex flex-col">
+        {/* Right Column - Elevated Overlapping White Verify Form Card */}
+        <div className="flex-1 bg-white rounded-t-[28px] sm:rounded-t-[32px] md:rounded-t-none md:rounded-l-[28px] lg:rounded-l-[36px] -mt-6 sm:-mt-8 md:mt-0 md:-ml-10 lg:-ml-14 z-10 shadow-[-16px_0_40px_rgba(0,0,0,0.14),0_10px_30px_rgba(0,0,0,0.06)] flex flex-col justify-center items-center px-6 py-8 sm:px-10 sm:py-12 md:px-12 lg:px-16 relative">
+          <div className="w-full max-w-[420px] flex flex-col">
             
             {/* Solar Scrap Logo */}
-            <div className="mb-3 sm:mb-4">
+            <div className="mb-4 sm:mb-5">
               <Image
                 src="/images/solar-scrap-img.png"
                 alt="Solar Scrap"
-                width={160}
-                height={60}
-                className="w-[140px] sm:w-[155px] md:w-[165px] h-auto object-contain -ml-0.5"
+                width={165}
+                height={62}
+                className="w-[145px] sm:w-[160px] md:w-[170px] h-auto object-contain -ml-0.5"
                 priority
               />
             </div>
@@ -89,7 +89,7 @@ export default function VerifyEmailPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="mymail@gmail.com"
                   required
-                  className="w-full px-4 py-3 sm:py-3.5 text-xs sm:text-sm md:text-base text-gray-900 placeholder:text-gray-400 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#009639] focus:ring-2 focus:ring-[#009639]/15 transition-all duration-200"
+                  className="w-full px-4 py-3 sm:py-3.5 text-xs sm:text-sm md:text-base text-gray-900 placeholder:text-gray-400 bg-white border border-gray-200 rounded-xl outline-none focus:border-[#00873D] focus:ring-2 focus:ring-[#00873D]/15 transition-all duration-200"
                 />
               </div>
 
@@ -98,7 +98,7 @@ export default function VerifyEmailPage() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full py-3.5 sm:py-4 px-4 bg-[#009639] hover:bg-[#008533] active:bg-[#00732c] text-white text-sm sm:text-base font-bold rounded-xl shadow-lg shadow-[#009639]/25 hover:shadow-xl transition-all duration-200 flex items-center justify-center disabled:opacity-75 cursor-pointer"
+                  className="w-full py-3.5 sm:py-4 px-4 bg-[#00873D] hover:bg-[#007534] active:bg-[#00652d] text-white text-sm sm:text-base font-bold rounded-xl shadow-lg shadow-[#00873D]/25 hover:shadow-xl transition-all duration-200 flex items-center justify-center disabled:opacity-75 cursor-pointer"
                 >
                   {isLoading ? (
                     <span className="inline-block w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
