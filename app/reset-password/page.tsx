@@ -45,11 +45,11 @@ export default function ResetPasswordPage() {
       {/* Outer Card Frame with 10px-14px padding */}
       <div className="w-full max-w-[1360px] bg-white rounded-[32px] sm:rounded-[40px] p-2.5 sm:p-3 md:p-3.5 shadow-2xl border border-gray-200/80 flex flex-col md:flex-row relative min-h-[640px] md:min-h-[728px] items-center">
         
-        {/* Left Column - Worker Loading Solar Panels Image (Taller full-height image) */}
+        {/* Left Column - Change Password Image (Taller full-height image) */}
         <div className="relative w-full md:w-[50%] lg:w-[52%] h-[340px] sm:h-[420px] md:h-[700px] min-h-[300px] rounded-[22px] sm:rounded-[26px] md:rounded-[28px] overflow-hidden shadow-xs shrink-0">
           <Image
-            src="/images/reset-password-img.jpg"
-            alt="Worker recycling solar scrap panels"
+            src="/images/change-password.jpg"
+            alt="Solar scrap equipment"
             fill
             priority
             className="object-cover object-center"
