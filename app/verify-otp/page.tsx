@@ -109,24 +109,24 @@ export default function VerifyOtpPage() {
 
   return (
     <main className="min-h-screen w-full bg-[#E5E7EB] p-2 sm:p-4 md:p-6 lg:p-8 flex items-center justify-center">
-      {/* Outer Card Frame */}
-      <div className="w-full max-w-[1360px] bg-white rounded-[32px] sm:rounded-[40px] shadow-2xl border border-gray-200/80 flex flex-col md:flex-row relative min-h-[640px] md:min-h-[760px] overflow-hidden items-center justify-between">
+      {/* Outer Card Frame with padding */}
+      <div className="w-full max-w-[1360px] bg-white rounded-[32px] sm:rounded-[40px] p-2.5 sm:p-3.5 md:p-4 shadow-2xl border border-gray-200/80 flex flex-col md:flex-row relative min-h-[640px] md:min-h-[740px] items-stretch">
         
-        {/* Left Column - Hero OTP Broken Solar Panels Image */}
-        <div className="relative w-full md:w-[58%] lg:w-[60%] h-[320px] sm:h-[420px] md:h-full min-h-[300px] md:min-h-[760px] shrink-0">
+        {/* Left Column - Hero OTP Broken Solar Panels Image with rounded corners on all sides & inset padding */}
+        <div className="relative w-full md:w-[53%] lg:w-[55%] h-[320px] sm:h-[400px] md:h-auto min-h-[300px] md:min-h-full rounded-[22px] sm:rounded-[26px] md:rounded-[30px] overflow-hidden shadow-xs shrink-0">
           <Image
             src="/images/otp-screen-img.jpg"
             alt="Solar Panels Facility"
             fill
             priority
             className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 60vw"
+            sizes="(max-width: 768px) 100vw, 55vw"
           />
         </div>
 
-        {/* Right Floating White OTP Form Card (All 4 corners rounded, deep shadow overlapping image) */}
-        <div className="w-full md:w-auto flex-1 flex justify-center items-center p-3 sm:p-4 md:p-6 lg:p-8 z-10 -mt-10 sm:-mt-14 md:mt-0 md:-ml-20 lg:-ml-28">
-          <div className="w-full max-w-[460px] bg-white rounded-[28px] sm:rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.16),-12px_0_35px_rgba(0,0,0,0.12)] border border-gray-100/90 p-6 sm:p-8 md:p-10 lg:p-11 flex flex-col justify-center my-2 sm:my-4 md:my-6">
+        {/* Right Column - Elevated Overlapping White OTP Form Card */}
+        <div className="flex-1 bg-white rounded-[24px] sm:rounded-[28px] md:rounded-[32px] shadow-[-16px_0_40px_rgba(0,0,0,0.14),0_10px_30px_rgba(0,0,0,0.06)] z-10 -mt-8 sm:-mt-10 md:mt-0 md:-ml-12 lg:-ml-16 flex flex-col justify-center items-center px-6 py-8 sm:px-10 sm:py-12 md:px-12 lg:px-16 relative">
+          <div className="w-full max-w-[420px] flex flex-col">
             
             {/* Solar Scrap Logo */}
             <div className="mb-4 sm:mb-5">
@@ -155,7 +155,7 @@ export default function VerifyOtpPage() {
             <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
               
               {/* White Bordered Inner Card Container */}
-              <div className="bg-gray-50/60 border border-gray-200/80 rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-center text-center shadow-xs">
+              <div className="bg-white border border-gray-200/90 rounded-2xl p-5 sm:p-6 flex flex-col items-center justify-center text-center shadow-xs">
                 {/* Green Circle with Envelope Icon */}
                 <div className="w-13 h-13 rounded-full bg-[#00873D] flex items-center justify-center text-white mb-3 shadow-md shadow-[#00873D]/20">
                   <Mail className="w-6 h-6 text-white" />
