@@ -24,24 +24,24 @@ export default function SignInPage() {
 
   return (
     <main className="min-h-screen w-full bg-[#E5E7EB] p-2 sm:p-4 md:p-6 lg:p-8 flex items-center justify-center">
-      {/* Outer Card Frame with padding */}
-      <div className="w-full max-w-[1360px] bg-white rounded-[32px] sm:rounded-[40px] p-2.5 sm:p-3.5 md:p-4 shadow-2xl border border-gray-200/80 flex flex-col md:flex-row relative min-h-[640px] md:min-h-[740px] items-center justify-between">
+      {/* Outer Card Frame with 10px-14px padding */}
+      <div className="w-full max-w-[1360px] bg-white rounded-[32px] sm:rounded-[40px] p-2.5 sm:p-3 md:p-3.5 shadow-2xl border border-gray-200/80 flex flex-col md:flex-row relative min-h-[640px] md:min-h-[728px] items-center">
         
         {/* Left Column - Hero Factory Image (Taller full-height image) */}
-        <div className="relative w-full md:w-[55%] lg:w-[57%] h-[340px] sm:h-[420px] md:h-[700px] min-h-[300px] rounded-[22px] sm:rounded-[26px] md:rounded-[30px] overflow-hidden shadow-xs shrink-0">
+        <div className="relative w-full md:w-[50%] lg:w-[52%] h-[340px] sm:h-[420px] md:h-[700px] min-h-[300px] rounded-[22px] sm:rounded-[26px] md:rounded-[28px] overflow-hidden shadow-xs shrink-0">
           <Image
             src="/images/sign-in-img.jpg"
             alt="Solar Scrap Facility"
             fill
             priority
             className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 57vw"
+            sizes="(max-width: 768px) 100vw, 52vw"
           />
         </div>
 
-        {/* Right Floating White Login Card (Smaller in height than the image, all 4 corners rounded, overlapping left image) */}
-        <div className="w-full md:w-auto flex-1 flex justify-center items-center z-10 -mt-10 sm:-mt-14 md:mt-0 md:-ml-16 lg:-ml-24 md:mr-2 lg:mr-4">
-          <div className="w-full max-w-[460px] bg-white rounded-[28px] sm:rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.16),-14px_0_38px_rgba(0,0,0,0.12)] border border-gray-100/90 p-6 sm:p-8 md:p-10 lg:p-11 flex flex-col justify-center my-3 sm:my-4 md:my-5">
+        {/* Right Column - Elevated Floating White Login Card (Fills right space, 10px smaller height, 10px overlap on image) */}
+        <div className="w-full md:flex-1 h-auto md:h-[680px] bg-white rounded-[24px] sm:rounded-[28px] md:rounded-[30px] shadow-[-10px_0_30px_rgba(0,0,0,0.12),0_10px_30px_rgba(0,0,0,0.06)] border border-gray-100/90 z-10 -mt-6 sm:-mt-8 md:mt-0 md:-ml-[10px] flex flex-col justify-center items-center px-6 py-8 sm:px-10 sm:py-12 md:px-12 lg:px-16 relative">
+          <div className="w-full max-w-[430px] flex flex-col">
             
             {/* Solar Scrap Logo */}
             <div className="mb-4 sm:mb-5">
@@ -56,20 +56,20 @@ export default function SignInPage() {
             </div>
 
             {/* Title & Subtitle */}
-            <h1 className="text-2xl sm:text-3xl md:text-[30px] font-bold text-gray-900 tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-[32px] font-bold text-gray-900 tracking-tight leading-tight">
               Welcome Back!
             </h1>
-            <p className="text-xs sm:text-sm md:text-[14.5px] text-gray-500 mt-1 mb-6 sm:mb-7 font-normal">
+            <p className="text-xs sm:text-sm md:text-[15px] text-gray-500 mt-1.5 mb-6 sm:mb-8 font-normal">
               Enter details and login to your account
             </p>
 
             {/* Sign In Form */}
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-4.5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
               {/* Email Address */}
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2"
                 >
                   Email Address
                 </label>
@@ -88,7 +88,7 @@ export default function SignInPage() {
               <div>
                 <label
                   htmlFor="password"
-                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2"
                 >
                   Password
                 </label>
