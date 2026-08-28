@@ -110,23 +110,23 @@ export default function VerifyOtpPage() {
   return (
     <main className="min-h-screen w-full bg-[#E5E7EB] p-2 sm:p-4 md:p-6 lg:p-8 flex items-center justify-center">
       {/* Outer Card Frame with padding */}
-      <div className="w-full max-w-[1360px] bg-white rounded-[32px] sm:rounded-[40px] p-2.5 sm:p-3.5 md:p-4 shadow-2xl border border-gray-200/80 flex flex-col md:flex-row relative min-h-[640px] md:min-h-[740px] items-stretch">
+      <div className="w-full max-w-[1360px] bg-white rounded-[32px] sm:rounded-[40px] p-2.5 sm:p-3.5 md:p-4 shadow-2xl border border-gray-200/80 flex flex-col md:flex-row relative min-h-[640px] md:min-h-[740px] items-center justify-between">
         
-        {/* Left Column - Hero OTP Broken Solar Panels Image with rounded corners on all sides & inset padding */}
-        <div className="relative w-full md:w-[53%] lg:w-[55%] h-[320px] sm:h-[400px] md:h-auto min-h-[300px] md:min-h-full rounded-[22px] sm:rounded-[26px] md:rounded-[30px] overflow-hidden shadow-xs shrink-0">
+        {/* Left Column - Hero OTP Broken Solar Panels Image (Taller full-height image) */}
+        <div className="relative w-full md:w-[55%] lg:w-[57%] h-[340px] sm:h-[420px] md:h-[700px] min-h-[300px] rounded-[22px] sm:rounded-[26px] md:rounded-[30px] overflow-hidden shadow-xs shrink-0">
           <Image
             src="/images/otp-screen-img.jpg"
             alt="Solar Panels Facility"
             fill
             priority
             className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 55vw"
+            sizes="(max-width: 768px) 100vw, 57vw"
           />
         </div>
 
-        {/* Right Column - Elevated Overlapping White OTP Form Card */}
-        <div className="flex-1 bg-white rounded-[24px] sm:rounded-[28px] md:rounded-[32px] shadow-[-16px_0_40px_rgba(0,0,0,0.14),0_10px_30px_rgba(0,0,0,0.06)] z-10 -mt-8 sm:-mt-10 md:mt-0 md:-ml-12 lg:-ml-16 flex flex-col justify-center items-center px-6 py-8 sm:px-10 sm:py-12 md:px-12 lg:px-16 relative">
-          <div className="w-full max-w-[420px] flex flex-col">
+        {/* Right Floating White OTP Form Card (Smaller in height than the image, all 4 corners rounded, overlapping left image) */}
+        <div className="w-full md:w-auto flex-1 flex justify-center items-center z-10 -mt-10 sm:-mt-14 md:mt-0 md:-ml-16 lg:-ml-24 md:mr-2 lg:mr-4">
+          <div className="w-full max-w-[460px] bg-white rounded-[28px] sm:rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.16),-14px_0_38px_rgba(0,0,0,0.12)] border border-gray-100/90 p-6 sm:p-8 md:p-10 lg:p-11 flex flex-col justify-center my-3 sm:my-4 md:my-5">
             
             {/* Solar Scrap Logo */}
             <div className="mb-4 sm:mb-5">
