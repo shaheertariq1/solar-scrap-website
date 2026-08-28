@@ -41,12 +41,12 @@ export default function ResetPasswordPage() {
   };
 
   return (
-    <main className="min-h-screen w-full bg-[#EBECEF] p-2 sm:p-4 md:p-6 lg:p-8 flex items-center justify-center">
-      {/* Outer Card filling the viewport */}
-      <div className="w-full max-w-[1380px] bg-white rounded-[28px] sm:rounded-[32px] md:rounded-[40px] shadow-2xl border border-gray-200/70 flex flex-col md:flex-row relative min-h-[calc(100vh-16px)] sm:min-h-[calc(100vh-32px)] md:min-h-[720px] overflow-hidden">
+    <main className="min-h-screen w-full bg-[#E5E7EB] p-2 sm:p-4 md:p-6 lg:p-8 flex items-center justify-center">
+      {/* Outer Card Frame */}
+      <div className="w-full max-w-[1360px] bg-white rounded-[32px] sm:rounded-[40px] shadow-2xl border border-gray-200/80 flex flex-col md:flex-row relative min-h-[640px] md:min-h-[760px] overflow-hidden items-center justify-between">
         
         {/* Left Column - Worker Loading Solar Panels Image */}
-        <div className="relative w-full md:w-[54%] lg:w-[56%] h-[280px] sm:h-[360px] md:h-auto min-h-[260px] md:min-h-full shrink-0">
+        <div className="relative w-full md:w-[58%] lg:w-[60%] h-[320px] sm:h-[420px] md:h-full min-h-[300px] md:min-h-[760px] shrink-0">
           <Image
             src="/images/reset-password-img.jpg"
             alt="Worker recycling solar scrap panels"
@@ -57,9 +57,9 @@ export default function ResetPasswordPage() {
           />
         </div>
 
-        {/* Right Column - Elevated Overlapping White Reset Password Card */}
-        <div className="flex-1 bg-white rounded-t-[28px] sm:rounded-t-[32px] md:rounded-t-none md:rounded-l-[28px] lg:rounded-l-[36px] -mt-6 sm:-mt-8 md:mt-0 md:-ml-10 lg:-ml-14 z-10 shadow-[-16px_0_40px_rgba(0,0,0,0.14),0_10px_30px_rgba(0,0,0,0.06)] flex flex-col justify-center items-center px-6 py-8 sm:px-10 sm:py-12 md:px-12 lg:px-16 relative">
-          <div className="w-full max-w-[420px] flex flex-col">
+        {/* Right Floating White Reset Password Card (All 4 corners rounded, deep shadow overlapping image) */}
+        <div className="w-full md:w-auto flex-1 flex justify-center items-center p-3 sm:p-4 md:p-6 lg:p-8 z-10 -mt-10 sm:-mt-14 md:mt-0 md:-ml-20 lg:-ml-28">
+          <div className="w-full max-w-[460px] bg-white rounded-[28px] sm:rounded-[32px] shadow-[0_20px_50px_rgba(0,0,0,0.16),-12px_0_35px_rgba(0,0,0,0.12)] border border-gray-100/90 p-6 sm:p-8 md:p-10 lg:p-11 flex flex-col justify-center my-2 sm:my-4 md:my-6">
             
             {/* Solar Scrap Logo */}
             <div className="mb-4 sm:mb-5">
@@ -85,20 +85,20 @@ export default function ResetPasswordPage() {
             </div>
 
             {/* Title & Subtitle */}
-            <h1 className="text-2xl sm:text-3xl md:text-[32px] font-bold text-gray-900 tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-[30px] font-bold text-gray-900 tracking-tight leading-tight">
               Reset Password
             </h1>
-            <p className="text-xs sm:text-sm md:text-[15px] text-gray-500 mt-1.5 mb-6 sm:mb-8 font-normal">
+            <p className="text-xs sm:text-sm md:text-[14.5px] text-gray-500 mt-1 mb-6 sm:mb-7 font-normal">
               Enter and confirm your new secure password
             </p>
 
             {/* Reset Password Form */}
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-4.5">
               {/* New Password */}
               <div>
                 <label
                   htmlFor="newPassword"
-                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5"
                 >
                   New Password
                 </label>
@@ -131,7 +131,7 @@ export default function ResetPasswordPage() {
               <div>
                 <label
                   htmlFor="confirmPassword"
-                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-2"
+                  className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5"
                 >
                   Confirm Password
                 </label>
