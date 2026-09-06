@@ -137,7 +137,16 @@ const initialBids: BidItem[] = [
   },
 ];
 
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
 export default function BidsPage() {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.replace("/auctions");
+  }, [router]);
+
   const [bids, setBids] = useState<BidItem[]>(initialBids);
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedAuctionFilter, setSelectedAuctionFilter] = useState("All Auctions");
@@ -166,6 +175,8 @@ export default function BidsPage() {
     { name: "Auctions", icon: "/icons/auction.svg", href: "/auctions" },
     { name: "Bids", icon: "/icons/bids.svg", href: "/bids" },
     { name: "Facebook Leads", icon: "/icons/facebook-leads.svg", href: "/facebook-leads" },
+    { name: "Quotation history", icon: "/icons/quotation-history.svg", href: "/quotation-history" },
+    { name: "My Inventory", icon: "/icons/inventory.svg", href: "/my-inventory" },
     { name: "Notifications", icon: "/icons/notifications.svg", href: "/notifications" },
     { name: "Settings", icon: "/icons/setting.svg", href: "/settings" },
   ];
@@ -230,19 +241,16 @@ export default function BidsPage() {
       <aside className="w-full lg:w-[240px] xl:w-[250px] bg-[#111827] text-white flex flex-col justify-between p-3.5 sm:p-4 lg:p-4.5 xl:p-5 shrink-0 border-b lg:border-b-0 lg:border-r border-gray-800 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto select-none">
         <div className="flex flex-col">
           {/* Logo */}
-          <div className="flex items-center justify-between lg:justify-start gap-3 pb-4 lg:pb-5 border-b border-gray-800/80 shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#009639] flex items-center justify-center text-white shadow-md shadow-[#009639]/30">
-                <Sun className="w-6 h-6 animate-spin-slow" />
-              </div>
-              <div>
-                <h2 className="text-base font-bold text-white tracking-tight leading-none">
-                  Solar Scrap
-                </h2>
-                <p className="text-[11px] text-gray-400 mt-1 leading-none font-medium">
-                  Seller Portal
-                </p>
-              </div>
+          <div className="flex items-center justify-between pb-4 lg:pb-5 border-b border-gray-800/80 shrink-0">
+            <div className="flex items-center">
+              <Image
+                src="/images/solar-scrap-sidebar-logo.png"
+                alt="Solar Scrap"
+                width={130}
+                height={52}
+                className="w-[125px] sm:w-[130px] h-auto object-contain"
+                priority
+              />
             </div>
 
             {/* Mobile Menu Toggle */}

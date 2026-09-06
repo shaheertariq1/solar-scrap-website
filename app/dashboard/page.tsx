@@ -24,6 +24,7 @@ import {
   Building2,
   FileSpreadsheet,
 } from "lucide-react";
+import Sidebar from "@/components/Sidebar";
 
 export default function DashboardPage() {
   const [activeNav, setActiveNav] = useState("Dashboard");
@@ -38,6 +39,8 @@ export default function DashboardPage() {
     { name: "Auctions", icon: "/icons/auction.svg", href: "/auctions" },
     { name: "Bids", icon: "/icons/bids.svg", href: "/bids" },
     { name: "Facebook Leads", icon: "/icons/facebook-leads.svg", href: "/facebook-leads" },
+    { name: "Quotation history", icon: "/icons/quotation-history.svg", href: "/quotation-history" },
+    { name: "My Inventory", icon: "/icons/inventory.svg", href: "/my-inventory" },
     { name: "Notifications", icon: "/icons/notifications.svg", href: "/notifications" },
     { name: "Settings", icon: "/icons/setting.svg", href: "/settings" },
   ];
@@ -156,87 +159,12 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen w-full bg-[#f8fafc] flex flex-col lg:flex-row">
-      {/* ===================== SIDEBAR ===================== */}
-      <aside className="w-full lg:w-[240px] xl:w-[250px] bg-[#111827] text-white flex flex-col justify-between p-3.5 sm:p-4 lg:p-4.5 xl:p-5 shrink-0 border-b lg:border-b-0 lg:border-r border-gray-800 lg:sticky lg:top-0 lg:h-screen lg:overflow-y-auto select-none">
-        
-        <div className="flex flex-col">
-          {/* Logo Section */}
-          <div className="flex items-center justify-between lg:justify-start gap-3 pb-4 lg:pb-5 border-b border-gray-800/80 shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-[#009639] flex items-center justify-center text-white shadow-md shadow-[#009639]/30">
-                <Sun className="w-6 h-6 animate-spin-slow" />
-              </div>
-              <div>
-                <h2 className="text-base font-bold text-white tracking-tight leading-none">
-                  Solar Scrap
-                </h2>
-                <p className="text-[11px] text-gray-400 mt-1 leading-none font-medium">
-                  Seller Portal
-                </p>
-              </div>
-            </div>
-
-            {/* Mobile Menu Toggle Button */}
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 text-gray-400 hover:text-white rounded-lg hover:bg-gray-800"
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
-
-          {/* Navigation Links */}
-          <nav className={`mt-3.5 lg:mt-4 space-y-1 lg:space-y-1.5 ${mobileMenuOpen ? "block" : "hidden lg:block"}`}>
-            {navItems.map((item) => {
-              const isActive = item.name === "Dashboard";
-              return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`w-full flex items-center gap-3 px-3.5 py-2 lg:py-2.5 rounded-xl text-xs font-medium transition-all duration-150 text-left ${
-                    isActive
-                      ? "bg-[#009639] text-white shadow-md shadow-[#009639]/30"
-                      : "text-gray-400 hover:text-gray-200 hover:bg-gray-800/70"
-                  }`}
-                >
-                  <span className="w-5 h-5 flex items-center justify-center shrink-0">
-                    <Image
-                      src={item.icon}
-                      alt={item.name}
-                      width={18}
-                      height={18}
-                      className={`w-4.5 h-4.5 object-contain ${
-                        isActive ? "brightness-0 invert" : "opacity-60"
-                      }`}
-                    />
-                  </span>
-                  <span className="truncate">{item.name}</span>
-                </Link>
-              );
-            })}
-          </nav>
-        </div>
-
-        {/* Sidebar Footer - Logout Button */}
-        <div className={`pt-3.5 lg:pt-4 mt-auto border-t border-gray-800/80 shrink-0 ${mobileMenuOpen ? "block" : "hidden lg:block"}`}>
-          <Link
-            href="/"
-            className="flex items-center gap-3 px-3.5 py-2 lg:py-2.5 rounded-xl text-xs font-medium text-white hover:text-red-400 hover:bg-red-950/20 transition-colors group"
-          >
-            <Image
-              src="/icons/logout-button.svg"
-              alt="Logout"
-              width={18}
-              height={18}
-              className="w-4.5 h-4.5 object-contain opacity-80 group-hover:opacity-100"
-            />
-            <span>Logout</span>
-          </Link>
-        </div>
-
-      </aside>
+      {/* ===================== UNIFIED SIDEBAR ===================== */}
+      <Sidebar
+        activeItem="Dashboard"
+        mobileMenuOpen={mobileMenuOpen}
+        setMobileMenuOpen={setMobileMenuOpen}
+      />
 
       {/* ===================== MAIN CONTENT AREA ===================== */}
       <div className="flex-1 bg-[#f8fafc] flex flex-col min-w-0 min-h-screen">

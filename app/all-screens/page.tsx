@@ -174,6 +174,58 @@ const allScreensList: ScreenCard[] = [
     icon: Settings,
     features: ["Edit Profile Avatar & Form", "Change Password 2-Column Grid", "6 Notification Toggle Switches", "3 Session Device Cards + Revoke", "3 Login Security Toggles", "Privacy & Terms of Service"],
   },
+
+  // 6. Quotations & Inventory (New from Figma)
+  {
+    title: "14. Quotation History",
+    category: "Admin Core",
+    description: "Table of all quotations with status tabs (All, Approved, Pending, Rejected), search filter, and '+ Create Quotations' action.",
+    path: "/quotation-history",
+    badge: "New Figma Screen",
+    badgeColor: "bg-emerald-50 text-[#009845] border-emerald-200",
+    icon: FileText,
+    features: ["Status Tabs (Approved/Pending/Rejected)", "Search by Name/Company/Phone", "View Quotation Action", "Create Quotation CTA"],
+  },
+  {
+    title: "15. Create Quotation Builder",
+    category: "Admin Core",
+    description: "Two-column interactive quotation builder with Personal Details & Item Details on the left, and live Invoice/Quotation Preview on the right.",
+    path: "/quotation-history/create",
+    badge: "New Figma Screen",
+    badgeColor: "bg-emerald-50 text-[#009845] border-emerald-200",
+    icon: FileText,
+    features: ["Live Calculation Preview", "Add/Remove Dynamic Line Items", "WhatsApp & Email Share", "Download PDF & Convert to Invoice"],
+  },
+  {
+    title: "16. View Quotation Document",
+    category: "Admin Core",
+    description: "Clean, print-friendly quotation document view matching official Solar Scrap branding with total breakdown and terms.",
+    path: "/quotation-history/view",
+    badge: "New Figma Screen",
+    badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
+    icon: FileText,
+    features: ["Brand Document Template", "Terms & Conditions", "Print View Support", "Download PDF & Convert to Invoice"],
+  },
+  {
+    title: "17. My Inventory",
+    category: "Admin Core",
+    description: "Purchased items inventory dashboard with categories (All, Solar, Batteries), quantity counts, purchase dates, and details popup modal.",
+    path: "/my-inventory",
+    badge: "New Figma Screen",
+    badgeColor: "bg-emerald-50 text-[#009845] border-emerald-200",
+    icon: Layers,
+    features: ["Category Filtering (Solar / Batteries)", "Item Details Modal", "Quantity & Price Badges", "Real-time Search Filter"],
+  },
+  {
+    title: "18. Create Auction Flow (Steps 1 & 2)",
+    category: "Marketplace & Bidding",
+    description: "Comprehensive equipment auction creation wizard with equipment category selector, condition pills, photo upload slots, live preview card, and multi-equipment support.",
+    path: "/auctions/create",
+    badge: "New Figma Screen",
+    badgeColor: "bg-emerald-50 text-[#009845] border-emerald-200",
+    icon: Gavel,
+    features: ["6 Equipment Category Cards", "Condition Pills (Scrap, Bullet Hit, etc.)", "Live Listing Card Preview", "Add Multiple Items (Step 2)", "Photo Upload Slots"],
+  },
 ];
 
 export default function AllScreensHub() {
